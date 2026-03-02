@@ -21,6 +21,7 @@
 
     .main .content {
         flex: 3;
+        min-width: min(100%, 20rem);
         padding: 1rem;
     }
     .main .content .card {
