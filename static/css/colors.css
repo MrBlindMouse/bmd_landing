@@ -1,0 +1,28 @@
+
+:root {
+    --color-green: oklch(0.63 0.2 142);
+    --color-red: oklch(0.63 0.2 31);
+    --color-blue: oklch(0.63 0.2 240);
+	--color-mid-grey: oklch(50% 0 0);
+
+	--color-canvas: color-mix(in oklab, oklch(18% 0 0) 100%, var(--color-blue) 10%); 
+	--color-ink: oklch(90% 0.001 0);
+    --color-canvas-link: color-mix(in oklab, var(--color-blue) 50%, var(--color-canvas) 50%);
+	--color-canvas-neutral: color-mix(in oklab, var(--color-blue) 50%, var(--color-canvas) 50%);
+	--color-canvas-negative: color-mix(in oklab, var(--color-red) 50%, var(--color-canvas) 50%);
+	--color-canvas-positive: color-mix(in oklab, var(--color-green) 50%, var(--color-canvas) 50%);
+    --color-ink-link: color-mix(in oklab, var(--color-blue) 20%, var(--color-ink));
+    --color-ink-neutral: color-mix(in oklab, var(--color-blue) 20%, var(--color-ink));
+    --color-ink-negative: color-mix(in oklab, var(--color-red) 20%, var(--color-ink));
+    --color-ink-positive: color-mix(in oklab, var(--color-green) 20%, var(--color-ink));
+
+	--shadow-color: color-mix(in oklab, var(--color-ink) 15%, transparent);
+	--shadow-sm: 1px 1px 3px var(--shadow-color);
+	--shadow-md: 4px 4px 12px var(--shadow-color);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Dark mode not implemented */
+    }
+}

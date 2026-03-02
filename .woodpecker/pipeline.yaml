@@ -1,0 +1,13 @@
+when:
+  event: [push, pull_request]
+  branch: [main]
+
+steps:
+  deploy:
+    image: alpine:3.21
+    volumes:
+      - /var/www/bmd_landing:/target
+    commands:
+      - apk add --no-cache rsync
+      - rsync -av --delete . /target/
+      - echo "Deployed at $(date -u)"

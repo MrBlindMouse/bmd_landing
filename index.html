@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMD-Studios | Johan Nel – Developer & Designer</title>
+    <meta name="description" content="BMD-Studios is the personal public facing site for Johan Nel, a developer and designer.">
+    <meta name="keywords" content="BMD-Studios, Johan Nel, developer, designer, portfolio, personal site">
+    <meta name="author" content="BMD-Studios">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+
+    <link rel="canonical" href="https://bmd-studios.co.za">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BMD-Studios | Johan Nel – Developer & Designer">
+    <meta property="og:description" content="BMD-Studios is the personal public facing site for Johan Nel, a developer and designer.">
+    <meta property="og:image" content="https://bmd-studios.co.za/static/images/web_icon.png">
+    <meta property="og:url" content="https://bmd-studios.co.za">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:site_name" content="BMD-Studios">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BMD-Studios | Johan Nel – Developer & Designer">
+    <meta name="twitter:description" content="BMD-Studios is the personal public facing site for Johan Nel, a developer and designer.">
+    <meta name="twitter:image" content="https://bmd-studios.co.za/static/images/web_icon.png">
+    <meta name="twitter:url" content="https://bmd-studios.co.za">
+    <meta name="twitter:site" content="@mrblindmouse">
+    <meta name="twitter:creator" content="@mrblindmouse">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="static/images/web_icon.png">
+    
+
+    <link rel="stylesheet" href="static/css/_reset.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="stylesheet" href="static/css/colors.css">
+    <link rel="stylesheet" href="static/css/fluid.css">
+</head>
+<body>
+    <canvas id="fluid-canvas" aria-hidden="true"></canvas>
+    <div class="header">
+        <div>
+            <h1>BMD-Studios</h1>
+            <p>The personal public facing site for Johan Nel, a developer and designer.</p>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="side"></div>
+        <div class="content">
+            <h2>About</h2>
+            <br>
+            <div class="card">
+                <p>Thank you for visiting my site. This is my personal portfolio and landing page, showcasing my work and projects.</p>
+                <p>My name is Johan, and I go by MrBlindMouse on social media.</p>
+                <p class="icon-links">
+                    <a href="https://x.com/mrblindmouse" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="X (Twitter)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="mailto:neljohan1206@gmail.com" class="icon-link" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                </p>
+            </div>
+            <br>
+            <h2>Projects</h2>
+            <hr>
+            <br>
+            <h3>Flit - PKM</h3>
+            <a href="https://github.com/Flit-PKM/" target="_blank" class="card">
+                <h3>Flit - Core</h3>
+                <p>This is the backend of Flit, built with FastAPI and SQLAlchemy.</p>
+                <p>It is responsible for the core functionality of Flit, including database management,
+                    user authentication, encryption and decryption, and AI analysis.</p>
+                </a>
+            <br>
+            <a href="https://flit-pkm.com" target="_blank" class="card">
+                <h3>Flit - Web</h3>
+                <p>Webapp for the Flit - Core backend.</p>
+                <p>Designed to be secure and private, Flit helps you manage and grow your knowledge base.</p>
+                <p>Also includes superuser management for the Core backend.</p>
+            </a>
+            <br>
+            <a href="https://github.com/Flit-PKM/flit_android" target="_blank" class="card">
+                <h3>Flit - Android</h3>
+                <p>This is the Android app for Flit, built with Kotlin and Jetpack Compose.</p>
+            </a>
+            <br>
+            <a href="https://github.com/Oshkelosh" target="_blank" class="card">
+                <h3>Oshkelosh</h3>
+                <p>Oshkelosh is a open-source, production ready E-Commerce platform; Build with Flask and SQLAlchemy.</p>
+                <p>Designed to be fully Extensible and Customisable, yet simple to use and maintain;
+                    With plugins for all major POD Stores and Payment Gateways.</p>
+                <p>During development I've realised the limitations of Flask and the neeed for a more robust framework.
+                    I will be rewriting Oshkelosh with FastAPI as a backend, while allowing any frontend framework to be used.</p>
+                <p>Development of Oshkelosh is currently on hold, as I am focusing on Flit.</p>
+            </a>
+            <br>
+            <a class="card" href="https://github.com/MrBlindMouse/BooF_App.git" target="_blank">
+                <h3>BooF</h3>
+                <p>BooF is a automated crypto trading and portfolio management tool, built for the VALR exchange.</p>
+                <p>Built using Python's Flask framework with SQLAlchemy, and a websocket implementation for real-time market data.</p>
+                <p>BooF was my first real world project, built for actual users in mind.</p>
+                <p>BooF failed because I missed the timing for launch, by the time I was ready the hype around crypto and automated trading was over. I will polish up the code and launch it again in the future.</p>
+            </a>
+            <br>
+            <a class="card" href="https://github.com/MrBlindMouse/Alpaca_bot" target="_blank">
+                <h3>Alpaca Bot</h3>
+                <p>This is my personal trading bot, based on the patterns and methodologies I learnt from BooF.</p>
+                <p>Built with Python and Alpaca's API, the bot scrapes for the NASDAQ tickers and balances my portfolio according to live trading data. The bot works well, and I am happy with the results.</p>
+            </a>
+        </div>
+        <div class="side"></div>
+    </div>
+
+    <div class="footer">
+        <p>Philippians 4:13 - <quote>I can do all things through Christ who strengthens me.<quote/></p>
+    </div>
+    <script src="static/js/fluid-init.js"></script>
+</body>
+</html>

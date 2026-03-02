@@ -1,0 +1,74 @@
+@layer layout {
+
+    body {
+        position: relative;
+        z-index: 1;
+        padding-top: 3rem;
+    }
+
+    .header {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        display: flex;
+        margin: 1ch;
+    }
+
+    .main .content {
+        flex: 3;
+        padding: 1rem;
+    }
+    .main .content .card {
+        display: block;
+        background: color-mix(in oklab, var(--color-mid-grey) 10%, transparent);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        padding: 1rem;
+        transition: background 0.3s ease;
+    }
+
+    .main .content a.card:hover {
+        background: color-mix(in oklab, var(--color-mid-grey) 20%, transparent);
+    }
+
+    .icon-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+    }
+
+    .icon-link {
+        padding: 0.5rem;
+        color: var(--color-ink);
+    }
+
+    .icon-link:hover {
+        color: var(--color-ink-link);
+    }
+
+    .icon-link svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .main .side {
+        flex: 2;
+    }
+    
+    
+    .footer {
+        position: relative;
+        text-align: center;
+        background: color-mix(in oklab, var(--color-mid-grey) 10%, transparent);
+        backdrop-filter: blur(10px);
+        margin: auto;
+        padding: 1rem;
+    }
+    
+}

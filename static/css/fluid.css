@@ -1,0 +1,23 @@
+#fluid-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: block;
+}
+
+/* Let pointer events pass through content to the fluid canvas */
+body > *:not(canvas) {
+  pointer-events: none;
+}
+
+/* Restore interactivity for links and form controls */
+body a,
+body button,
+body input,
+body select,
+body textarea {
+  pointer-events: auto;
+}
