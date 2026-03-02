@@ -138,10 +138,7 @@ function getCSSColorRGB(cssVar) {
     color = getComputedStyle(el).color;
     document.body.removeChild(el);
   }
-  var parsed_color = parseColorToRGB(color);
-  console.log("getCSSColorRGB color", color);
-  console.log("getCSSColorRGB parsed_color", parsed_color);
-  return parsed_color;
+  return parseColorToRGB(color);
 }
 
 function startFluid() {
@@ -1390,10 +1387,17 @@ function runSimulation(config) {
   multipleSplats(parseInt(Math.random() * 20) + 5);
 
   let lastUpdateTime = Date.now();
+  let lastFrameTime = 0;
   let colorUpdateTimer = 0.0;
   update();
 
   function update() {
+    const now = performance.now();
+    if (lastFrameTime !== 0 && now - lastFrameTime < 1000 / 30) {
+      requestAnimationFrame(update);
+      return;
+    }
+    lastFrameTime = now;
     const dt = calcDeltaTime();
     if (resizeCanvas()) initFramebuffers();
     updateColors(dt);
@@ -1406,7 +1410,7 @@ function runSimulation(config) {
   function calcDeltaTime() {
     let now = Date.now();
     let dt = (now - lastUpdateTime) / 1000;
-    dt = Math.min(dt, 0.016666);
+    dt = Math.min(dt, 0.0333);
     lastUpdateTime = now;
     return dt;
   }
@@ -1844,9 +1848,7 @@ function runSimulation(config) {
   function generateColor() {
     if (config.SPLAT_COLOR) {
       var n = normalizeColor(config.SPLAT_COLOR);
-      var return_value = { r: n.r * 2, g: n.g * 2, b: n.b * 2 };
-      console.log("generateColor return_value", return_value);
-      return return_value;
+      return { r: n.r * 2, g: n.g * 2, b: n.b * 2 };
     }
     if (config.RANDOM_COLORS) {
       let c = HSVtoRGB(Math.random(), 1.0, 1.0);

@@ -3,6 +3,12 @@ when:
   branch: [main]
 
 steps:
+  minify:
+    image: node:20-alpine
+    commands:
+      - npm install -g terser
+      - terser static/js/webgl-fluid.js -o static/js/webgl-fluid.min.js -c -m
+
   deploy:
     image: alpine:3.21
     volumes:
