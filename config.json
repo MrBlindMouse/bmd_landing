@@ -19,7 +19,7 @@
     "b": 252
   },
   "TRANSPARENT": true,
-  "OPACITY": 0.1,
+  "OPACITY": 0.15,
   "BLOOM": false,
   "BLOOM_ITERATIONS": 8,
   "BLOOM_RESOLUTION": 256,

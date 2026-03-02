@@ -3,15 +3,18 @@
     body {
         position: relative;
         z-index: 1;
-        padding-top: 3rem;
     }
 
     .header {
-        width: 100%;
-        min-height: 100vh;
+        width: calc(100% - 4rem);
+        min-height: calc(100vh - 4rem);
+        margin: 2rem;
+        padding: 2rem;
+        box-sizing: border-box;
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid var(--color-mid-grey);
     }
 
     .main {
