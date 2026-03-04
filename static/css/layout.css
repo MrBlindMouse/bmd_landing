@@ -37,6 +37,9 @@
         min-width: min(100%, 20rem);
         padding: 1rem;
     }
+    .main .content h3 {
+        text-align: center;
+    }
     .main .content .card {
         display: block;
         background: color-mix(in oklab, var(--color-mid-grey) 10%, transparent);
