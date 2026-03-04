@@ -48,6 +48,9 @@
         padding: 1rem;
         transition: background 0.3s ease;
     }
+    .main .content .card h3 {
+        text-align: left;
+    }
 
     .main .content a.card:hover {
         background: color-mix(in oklab, var(--color-mid-grey) 20%, transparent);
