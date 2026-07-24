@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMD-Studios | Johan Nel – Developer & Designer</title>
-    <meta name="description" content="Johan Nel – Fullstack Python Developer & Designer">
+    <meta name="description" content="Personal portfolio of Johan Nel (MrBlindMouse) — full-stack Python developer and designer based in Johannesburg, South Africa.">
     <meta name="keywords" content="BMD-Studios, Johan Nel, developer, designer, portfolio, personal site">
-    <meta name="author" content="BMD-Studios">
+    <meta name="author" content="Johan Nel">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
@@ -15,8 +15,11 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="BMD-Studios | Johan Nel – Developer & Designer">
-    <meta property="og:description" content="Johan Nel – Fullstack Python Developer & Designer">
+    <meta property="og:description" content="Personal portfolio of Johan Nel (MrBlindMouse) — full-stack Python developer and designer based in Johannesburg, South Africa.">
     <meta property="og:image" content="https://bmd-studios.co.za/static/images/web_icon.png">
+    <meta property="og:image:width" content="649">
+    <meta property="og:image:height" content="649">
+    <meta property="og:image:alt" content="BMD-Studios logo">
     <meta property="og:url" content="https://bmd-studios.co.za">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_ZA">
@@ -25,15 +28,50 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BMD-Studios | Johan Nel – Developer & Designer">
-    <meta name="twitter:description" content="Johan Nel – Fullstack Python Developer & Designer">
+    <meta name="twitter:description" content="Personal portfolio of Johan Nel (MrBlindMouse) — full-stack Python developer and designer based in Johannesburg, South Africa.">
     <meta name="twitter:image" content="https://bmd-studios.co.za/static/images/web_icon.png">
+    <meta name="twitter:image:alt" content="BMD-Studios logo">
     <meta name="twitter:url" content="https://bmd-studios.co.za">
     <meta name="twitter:site" content="@mrblindmouse">
     <meta name="twitter:creator" content="@mrblindmouse">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="static/images/web_icon.png">
-    
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://bmd-studios.co.za/#website",
+          "url": "https://bmd-studios.co.za",
+          "name": "BMD-Studios",
+          "description": "Personal portfolio of Johan Nel (MrBlindMouse) — full-stack Python developer and designer based in Johannesburg, South Africa.",
+          "inLanguage": "en-ZA",
+          "publisher": { "@id": "https://bmd-studios.co.za/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://bmd-studios.co.za/#person",
+          "name": "Johan Nel",
+          "alternateName": "MrBlindMouse",
+          "url": "https://bmd-studios.co.za",
+          "jobTitle": "Full-stack Python Developer & Designer",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Johannesburg",
+            "addressCountry": "ZA"
+          },
+          "sameAs": [
+            "https://github.com/MrBlindMouse",
+            "https://x.com/mrblindmouse"
+          ],
+          "email": "mailto:neljohan1206@gmail.com"
+        }
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="static/css/_reset.css">
     <link rel="stylesheet" href="static/css/base.css">
@@ -58,7 +96,7 @@
             <h2>About</h2>
             <div class="card">
                 <p>Thank you for visiting my site. This is my personal portfolio and landing page, showcasing my work and projects.</p>
-                <p>My name is Johan, and I go by MrBlindMouse on social media. I am a full-stack Python developer and designer base in Johannesburg, South Africa.</p>
+                <p>My name is Johan, and I go by MrBlindMouse on social media. I am a full-stack Python developer and designer based in Johannesburg, South Africa.</p>
                 <p class="icon-links">
                     <a href="https://github.com/MrBlindMouse" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -75,15 +113,14 @@
             <h2>Projects</h2>
             <hr>
             <br>
-            <h3>Flit - PKM</h3>
-            <a href="https://github.com/Flit-PKM/" target="_blank" class="card">
-                <h3>Flit - Core</h3>
-                <p>The Core is the backend of Flit, built with FastAPI and SQLAlchemy.</p>
-                <p>At rest encryption ensures your data is safe and private.</p>
-                <p>AI integration allows for relationship analysis and categorization.</p>
-                <p>Voice transcription and formatting</p>
+            <h3>Para-Scope</h3>
+            <a href="https://github.com/MrBlindMouse/para_scope" target="_blank" class="card">
+                <h3>Para-Scope</h3>
+                <p>This is my personal dashboard. Its used to monitor my various projects and services.</p>
+                <p>Built with polling and webhook capabilities, including minor automation; Para-Scope can track and notify me of various events and statuses, as well as forward data to my other services.</p>
             </a>
             <br>
+            <h3>Flit - PKM</h3>
             <a href="https://flit-pkm.com" target="_blank" class="card">
                 <h3>Flit - Web</h3>
                 <p>Refine your notes and build your knowledge base.</p>
@@ -114,50 +151,29 @@
                 </ul>
             </div>
             <br>
-            <div class="card">
-                <h3>InkPot - Web</h3>
-                <h4>Coming Soon</h4>
-                <p>Writing tool and Authoring Assistant</p>
-                <p>Features:</p>
-                <ul>
-                    <li>Source and Reference Material Management</li>
-                    <li>Story Structure Management</li>
-                    <li>Per Paragraph Authoring Assistant</li>
-                    <li>Flit - Core integration for Note-Tree importing as references</li>
-                </ul>
-            </div>
-            <br>
             <h3>Oshkelosh - E-Commerce Platform</h3>
             <a href="https://github.com/Oshkelosh" target="_blank" class="card">
                 <h3>Oshkelosh</h3>
-                <p>Oshkelosh is a open-source, production ready E-Commerce platform; Build with Flask and SQLAlchemy.</p>
+                <p>Oshkelosh is a open-source, production ready E-Commerce platform; Build with FastAPI.</p>
                 <p>Designed to be fully Extensible and Customisable, yet simple to use and maintain;
-                    With plugins for all major POD Stores and Payment Gateways.</p>
-                <br>
-                <h4>Important</h4>
-                <p>During development I've realised the limitations of Flask and the need for a more robust framework.
-                    I will be rewriting Oshkelosh with FastAPI as a backend, while allowing any frontend framework to be used.</p>
-                <p>Development of Oshkelosh is currently on hold, as I am focusing on Flit.</p>
+                    With plugins for all major POD Stores, Payment Gateways and various other integrations.</p>
             </a>
             <br>
-            <h3>BooF - Crypto Trading & Portfolio Manager</h3>
-            <a class="card" href="https://github.com/MrBlindMouse/BooF_App.git" target="_blank">
-                <h3>BooF</h3>
-                <p>BooF is a automated crypto trading and portfolio management tool, built for the VALR exchange.</p>
-                <p>Built using Python's Flask framework with SQLAlchemy, and a websocket implementation for real-time market data.</p>
-                <p>BooF was my first real world project, built for actual users in mind.</p>
-                <p>BooF failed because I missed the timing for launch, by the time I was ready the hype around crypto and automated trading was over. I will polish up the code and launch it again in the future.</p>
+            <a href="https://verdant-prints.com" target="_blank" class="card">
+                <h3>Verdant Prints</h3>
+                <p>VP is a store built using Oshkelosh, specialising in classical botanical prints.</p>
+                <p>Discover premium vintage botanical prints from historical archives. Expertly restored botanical illustrations printed with exceptional quality for timeless, elegant wall art.</p>
             </a>
             <br>
             <h3>Alpaca Bot & Portfolio Manager</h3>
             <a class="card" href="https://github.com/MrBlindMouse/Alpaca_bot" target="_blank">
                 <h3>Alpaca Bot</h3>
-                <p>This is my personal trading bot, based on the patterns and methodologies I learnt from BooF.</p>
+                <p>This is my personal trading bot, based on the patterns and methodologies I learnt from BooF(Crypto Trading & Portfolio Manager webapp).</p>
                 <p>Built with Python and Alpaca's API, the bot scrapes for the NASDAQ tickers and balances my portfolio according to live trading data. The bot works well, and I am happy with the results.</p>
             </a>
             <br>
             <h3>Roomz</h3>
-            <a class="card" href="https://github.com/MrBlindMouse/Roomz" targer="_blank">
+            <a class="card" href="https://github.com/MrBlindMouse/Roomz" target="_blank">
                 <h3>Roomz - Radio Server</h3>
                 <p>Stream music to multiple devices for synced playback.</p>
                 <p>This is meant to be used on a LOCAL network, and there are no security built in. Anybody can connect to the stream if they know the server url.</p>
