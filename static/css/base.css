@@ -3,18 +3,108 @@
 		background: var(--color-canvas);
 		color: var(--color-ink);
 		font-family: system-ui, sans-serif;
+		min-height: 100%;
 	}
-	h1 { font-size: 2.5rem; font-weight: 700; }
-	h2 { font-size: 2rem;   font-weight: 700; }
-	h3 { font-size: 1.5rem; font-weight: 600; }
-	br { height: 1rem; }
-	 ul {
-		margin-left: 1rem;
-		list-style-type: disc;
-	 }
-	 ol {
-		margin-left: 1rem;
-		list-style-type: decimal;
-	 }
 
+	html::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		background: radial-gradient(
+			120% 80% at 50% 0%,
+			color-mix(in lch, var(--color-ink) 4%, transparent),
+			transparent 55%
+		);
+	}
+
+	body {
+		color: color-mix(in lch, var(--color-ink) 88%, var(--color-canvas));
+		line-height: 1.65;
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: var(--color-ink);
+		font-weight: 600;
+		letter-spacing: -0.02em;
+	}
+
+	h1 {
+		font-size: clamp(2rem, 5vw, 2.75rem);
+		font-weight: 500;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+	}
+
+	h3 {
+		font-size: 1.125rem;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: 0.875rem;
+		font-weight: 500;
+		color: color-mix(in lch, var(--color-ink) 65%, var(--color-canvas));
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+
+	p + p {
+		margin-top: 0.75rem;
+	}
+
+	ul {
+		margin-top: 0.5rem;
+		margin-left: 1.25rem;
+		list-style-type: disc;
+	}
+
+	ol {
+		margin-left: 1.25rem;
+		list-style-type: decimal;
+	}
+
+	li + li {
+		margin-top: 0.25rem;
+	}
+
+	a:focus-visible {
+		outline: 2px solid color-mix(in lch, var(--color-ink) 45%, transparent);
+		outline-offset: 3px;
+		border-radius: 2px;
+	}
+
+	.skip-link {
+		position: absolute;
+		left: 1rem;
+		top: 1rem;
+		padding: 0.35rem 0.75rem;
+		background: var(--color-canvas);
+		color: var(--color-ink);
+		border: 1px solid color-mix(in lch, var(--color-ink) 14%, transparent);
+		border-radius: 0.25rem;
+		z-index: 2;
+		transform: translateY(-200%);
+	}
+
+	.skip-link:focus {
+		transform: translateY(0);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
 }

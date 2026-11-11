@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bmd-studios.co.za/sitemap.xml
+Sitemap: https://bmd-studios.com/sitemap.xml

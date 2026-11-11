@@ -1,8 +1,9 @@
 # Blind Mouse Design - Studios
 
-Static landing page and portfolio for [BMD-Studios](https://bmd-studios.co.za)—Johan Nel, developer and designer. Plain HTML, CSS, and JavaScript with a WebGL fluid background. No build step; serve the repo root with any static server.
+Static landing page and portfolio for [BMD-Studios](https://bmd-studios.com)—Johan Nel, developer and designer. Plain HTML, CSS, and a small typing script. E-ink–inspired palette (warm paper in light mode, green-tinted dark mode), no build step; serve the repo root with any static server.
 
 ### The What & Why
-I prefer using vanilla technologies, especially CSS. Focusing on using OKLab's color palette, as shown in this article by [Jason Zimbars](https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/), and this [unofficial style guide](https://github.com/marckohlbrugge/unofficial-37signals-coding-style-guide)
 
-Thanx to PavelDoGreat for the [Fluid Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation)
+Vanilla technologies, especially CSS: LCH base colors, semantic `--color-canvas` / `--color-ink`, and `color-mix()` for surfaces and muted text. Layout is a full-viewport hero frame and a two-column project grid (one column on narrow viewports).
+
+Product landings: [para-scope](https://bmd-studios.com/para-scope/) [`/para-scope/`](para-scope/index.html), [Portico](https://bmd-studios.com/portico/) [`/portico/`](portico/index.html), [Marked](https://bmd-studios.com/marked/) [`/marked/`](marked/index.html) (coming soon), [Oshkelosh](https://bmd-studios.com/oshkelosh/) [`/oshkelosh/`](oshkelosh/index.html).

@@ -11,16 +11,16 @@
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
 
-    <link rel="canonical" href="https://bmd-studios.co.za">
+    <link rel="canonical" href="https://bmd-studios.com">
 
     <!-- Open Graph -->
     <meta property="og:title" content="BMD-Studios | Johan Nel – Developer & Designer">
     <meta property="og:description" content="Personal portfolio of Johan Nel (MrBlindMouse) — full-stack Python developer and designer based in Johannesburg, South Africa.">
-    <meta property="og:image" content="https://bmd-studios.co.za/static/images/web_icon.png">
+    <meta property="og:image" content="https://bmd-studios.com/static/images/web_icon.png">
     <meta property="og:image:width" content="649">
     <meta property="og:image:height" content="649">
     <meta property="og:image:alt" content="BMD-Studios logo">
-    <meta property="og:url" content="https://bmd-studios.co.za">
+    <meta property="og:url" content="https://bmd-studios.com">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_ZA">
     <meta property="og:site_name" content="BMD-Studios">
@@ -29,13 +29,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BMD-Studios | Johan Nel – Developer & Designer">
     <meta name="twitter:description" content="Personal portfolio of Johan Nel (MrBlindMouse) — full-stack Python developer and designer based in Johannesburg, South Africa.">
-    <meta name="twitter:image" content="https://bmd-studios.co.za/static/images/web_icon.png">
+    <meta name="twitter:image" content="https://bmd-studios.com/static/images/web_icon.png">
     <meta name="twitter:image:alt" content="BMD-Studios logo">
-    <meta name="twitter:url" content="https://bmd-studios.co.za">
+    <meta name="twitter:url" content="https://bmd-studios.com">
     <meta name="twitter:site" content="@mrblindmouse">
     <meta name="twitter:creator" content="@mrblindmouse">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="static/images/web_icon.png">
 
     <script type="application/ld+json">
@@ -44,19 +43,19 @@
       "@graph": [
         {
           "@type": "WebSite",
-          "@id": "https://bmd-studios.co.za/#website",
-          "url": "https://bmd-studios.co.za",
+          "@id": "https://bmd-studios.com/#website",
+          "url": "https://bmd-studios.com",
           "name": "BMD-Studios",
           "description": "Personal portfolio of Johan Nel (MrBlindMouse) — full-stack Python developer and designer based in Johannesburg, South Africa.",
           "inLanguage": "en-ZA",
-          "publisher": { "@id": "https://bmd-studios.co.za/#person" }
+          "publisher": { "@id": "https://bmd-studios.com/#person" }
         },
         {
           "@type": "Person",
-          "@id": "https://bmd-studios.co.za/#person",
+          "@id": "https://bmd-studios.com/#person",
           "name": "Johan Nel",
           "alternateName": "MrBlindMouse",
-          "url": "https://bmd-studios.co.za",
+          "url": "https://bmd-studios.com",
           "jobTitle": "Full-stack Python Developer & Designer",
           "address": {
             "@type": "PostalAddress",
@@ -67,125 +66,152 @@
             "https://github.com/MrBlindMouse",
             "https://x.com/mrblindmouse"
           ],
-          "email": "mailto:neljohan1206@gmail.com"
+          "email": "neljohan1206@gmail.com"
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://bmd-studios.com/#projects",
+          "name": "Projects",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "para-scope",
+              "url": "https://bmd-studios.com/para-scope/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Portico",
+              "url": "https://bmd-studios.com/portico/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Marked",
+              "url": "https://bmd-studios.com/marked/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Oshkelosh",
+              "url": "https://bmd-studios.com/oshkelosh/"
+            }
+          ]
         }
       ]
     }
     </script>
 
     <link rel="stylesheet" href="static/css/_reset.css">
-    <link rel="stylesheet" href="static/css/base.css">
-    <link rel="stylesheet" href="static/css/layout.css">
     <link rel="stylesheet" href="static/css/colors.css">
-    <link rel="stylesheet" href="static/css/fluid.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/project-card.css">
+    <link rel="stylesheet" href="static/css/layout.css">
 
-    <script defer src="http://analytics.bmd-studios.com/script.js" data-website-id="8697f1f8-02ea-4dbf-8157-0031a327e362"></script>
+    <script defer src="https://analytics.bmd-studios.com/script.js" data-website-id="8697f1f8-02ea-4dbf-8157-0031a327e362"></script>
 </head>
 <body>
-    <canvas id="fluid-canvas" aria-hidden="true"></canvas>
-    <div class="header">
-        <div>
-            <h1>BMD-Studios</h1>
-            <p>The personal public facing site for Johan Nel, a developer and designer.</p>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="hero">
+        <div class="hero__inner">
+            <h1 class="hero__brand">
+                <span class="hero__brand-line">Blind</span>
+                <span class="hero__brand-line">Mouse</span>
+                <span class="hero__brand-line">Design</span>
+                <span class="hero__brand-line hero__brand-suffix">-studios</span>
+            </h1>
+            <p class="hero__tagline">Portfolio site for Johan Nel, aka "MrBlindMouse",</p>
+            <p class="hero__role" data-role-rotate aria-label="a designer, a developer, a dreamer, a tinkerer, an entrepreneur, an enthusiast, an explorer, a romantic, a dog dad, a husband, a friend, a driver, a foody, a coffee snob, a beer connoisseur, a music lover, a bookworm, a traveler, a nature lover, a tech geek, a problem solver, a creative thinker, a perfectionist, a life-long learner, a ADHD sufferer">
+                <span class="hero__role-line" data-role-line>a designer</span>
+            </p>
         </div>
-    </div>
-    
-    <div class="main">
-        <div class="side"></div>
-        <div class="content">
-            <h2>About</h2>
-            <div class="card">
+    </header>
+
+    <main id="main" class="page">
+        <section class="page__section" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <article class="project-card about-card">
                 <p>Thank you for visiting my site. This is my personal portfolio and landing page, showcasing my work and projects.</p>
-                <p>My name is Johan, and I go by MrBlindMouse on social media. I am a full-stack Python developer and designer based in Johannesburg, South Africa.</p>
+                <p>My name is Johan, and I go by MrBlindMouse on social media. I am a full-stack developer and designer based in Johannesburg, South Africa.</p>
                 <p class="icon-links">
-                    <a href="https://github.com/MrBlindMouse" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
+                    <a href="https://github.com/MrBlindMouse" target="_blank" rel="me noopener noreferrer" class="icon-link" aria-label="GitHub">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
-                    <a href="https://x.com/mrblindmouse" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="X (Twitter)">
+                    <a href="https://x.com/mrblindmouse" target="_blank" rel="me noopener noreferrer" class="icon-link" aria-label="X (Twitter)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
                     <a href="mailto:neljohan1206@gmail.com" class="icon-link" aria-label="Email">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     </a>
                 </p>
-            </div>
-            <br>
-            <h2>Projects</h2>
-            <hr>
-            <br>
-            <h3>Para-Scope</h3>
-            <a href="https://github.com/MrBlindMouse/para_scope" target="_blank" class="card">
-                <h3>Para-Scope</h3>
-                <p>This is my personal dashboard. Its used to monitor my various projects and services.</p>
-                <p>Built with polling and webhook capabilities, including minor automation; Para-Scope can track and notify me of various events and statuses, as well as forward data to my other services.</p>
-            </a>
-            <br>
-            <h3>Flit - PKM</h3>
-            <a href="https://flit-pkm.com" target="_blank" class="card">
-                <h3>Flit - Web</h3>
-                <p>Refine your notes and build your knowledge base.</p>
-                <p>Explore the knowledge graph and discover hidden insights.</p>
-                <p>Private and Secure, with database encryption.</p>
-                <p>Multi-Device Sync and Backup</p>
-            </a>
-            <br>
-            <a href="https://play.google.com/store/apps/details?id=com.bmdstudios.flit" target="_blank" class="card">
-                <h3>Flit - Android</h3>
-                <p>Take notes and Transcribe Voice Recordings</p>
-                <p>Organise your notes with Categories and Relationships</p>
-                <p>Full import and export, zero lock in</p>
-                <p>100% Local and Secure, no Signup required</p>
-            </a>
-            <br>
-            <div class="card">
-                <h3>Still - Android</h3>
-                <h4>Coming Soon</h4>
-                <p>A Simple and Elegant Meditation app.</p>
-                <p>Features:</p>
-                <ul>
-                    <li>Meditation Timer</li>
-                    <li>Progress Tracking</li>
-                    <li>Daily Confirmation</li>
-                    <li>Journalling, syncs with Flit - Core</li>
-                    <li>Customizable Themes - Sounds, images, animations, ect</li>
-                </ul>
-            </div>
-            <br>
-            <h3>Oshkelosh - E-Commerce Platform</h3>
-            <a href="https://github.com/Oshkelosh" target="_blank" class="card">
-                <h3>Oshkelosh</h3>
-                <p>Oshkelosh is a open-source, production ready E-Commerce platform; Build with FastAPI.</p>
-                <p>Designed to be fully Extensible and Customisable, yet simple to use and maintain;
-                    With plugins for all major POD Stores, Payment Gateways and various other integrations.</p>
-            </a>
-            <br>
-            <a href="https://verdant-prints.com" target="_blank" class="card">
-                <h3>Verdant Prints</h3>
-                <p>VP is a store built using Oshkelosh, specialising in classical botanical prints.</p>
-                <p>Discover premium vintage botanical prints from historical archives. Expertly restored botanical illustrations printed with exceptional quality for timeless, elegant wall art.</p>
-            </a>
-            <br>
-            <h3>Alpaca Bot & Portfolio Manager</h3>
-            <a class="card" href="https://github.com/MrBlindMouse/Alpaca_bot" target="_blank">
-                <h3>Alpaca Bot</h3>
-                <p>This is my personal trading bot, based on the patterns and methodologies I learnt from BooF(Crypto Trading & Portfolio Manager webapp).</p>
-                <p>Built with Python and Alpaca's API, the bot scrapes for the NASDAQ tickers and balances my portfolio according to live trading data. The bot works well, and I am happy with the results.</p>
-            </a>
-            <br>
-            <h3>Roomz</h3>
-            <a class="card" href="https://github.com/MrBlindMouse/Roomz" target="_blank">
-                <h3>Roomz - Radio Server</h3>
-                <p>Stream music to multiple devices for synced playback.</p>
-                <p>This is meant to be used on a LOCAL network, and there are no security built in. Anybody can connect to the stream if they know the server url.</p>
-                <p>Built with FastAPI and vanilla HTML/JS/CSS, this 'radio' server allows for multiple music libraries, live chat between clients, and millisecond delay for accurate sync.</p>
-            </a>
-        </div>
-        <div class="side"></div>
-    </div>
+            </article>
+        </section>
 
-    <div class="footer">
-        <p>Philippians 4:13 - <quote>I can do all things through Christ who strengthens me.<quote/></p>
-    </div>
-    <script src="static/js/fluid-init.js" defer></script>
+        <section class="page__section" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <div class="project-grid">
+                <a href="/para-scope/" class="project-card">
+                    <h3>Para-Scope</h3>
+                    <p>My private ops board: watch services, catch webhooks, and react when something needs attention — all on hardware I control.</p>
+                    <p>Dashboards for status and charts, plus calendar and kanban views when I want planning and alerts in one place.</p>
+                </a>
+
+                <a href="/portico/" class="project-card">
+                    <h3>Portico</h3>
+                    <p>Build small, social terminal experiences people reach over SSH — lobbies, guestbooks, chat, or whatever you imagine in text.</p>
+                    <p>A Go framework that handles sessions and shared spaces so you can focus on the site, not the plumbing.</p>
+                </a>
+
+                <a href="/marked/" class="project-card project-card--muted">
+                    <h3>Marked</h3>
+                    <h4>Coming soon</h4>
+                    <p>Put a logo, signature, text, or timestamp on photos and video — on your phone, with nothing sent to the cloud.</p>
+                    <p>A small editor for marks that feel part of the memory, not pasted on afterward.</p>
+                </a>
+
+                <a href="https://flit-pkm.com" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3>Flit — Web</h3>
+                    <p>Refine your notes and build your knowledge base.</p>
+                    <p>Explore the knowledge graph and discover hidden insights. Private and secure, with database encryption. Multi-device sync and backup.</p>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.bmdstudios.flit" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3>Flit — Android</h3>
+                    <p>Take notes and transcribe voice recordings.</p>
+                    <p>Organise your notes with categories and relationships. Full import and export, zero lock-in. 100% local and secure, no signup required.</p>
+                </a>
+
+                <a href="/oshkelosh/" class="project-card">
+                    <h3>Oshkelosh</h3>
+                    <p>An open shop platform you host yourself — pick your storefront, payment, and print partners instead of renting a locked-in SaaS.</p>
+                    <p>Modular addons for POD suppliers, email, SMS, and more; a real admin and API behind the scenes.</p>
+                </a>
+
+                <a href="https://verdant-prints.com" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3>Verdant Prints</h3>
+                    <p>A store built using Oshkelosh, specialising in classical botanical prints.</p>
+                    <p>Premium vintage botanical illustrations from historical archives, restored and printed for timeless wall art.</p>
+                </a>
+
+                <a href="https://github.com/MrBlindMouse/Alpaca_bot" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3>Alpaca Bot</h3>
+                    <p>Personal trading bot based on patterns and methodologies from BooF (crypto trading and portfolio manager).</p>
+                    <p>Python and Alpaca&apos;s API: scrapes NASDAQ tickers and balances the portfolio from live trading data.</p>
+                </a>
+
+                <a href="https://github.com/MrBlindMouse/Roomz" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <h3>Roomz — Radio Server</h3>
+                    <p>Stream music to multiple devices for synced playback on a local network.</p>
+                    <p>FastAPI and vanilla HTML/JS/CSS: multiple music libraries, live chat between clients, millisecond delay for accurate sync.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Philippians 4:13 — <q>I can do all things through Christ who strengthens me.</q></p>
+    </footer>
+    <script src="static/js/typing.js" defer></script>
 </body>
 </html>

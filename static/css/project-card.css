@@ -1,0 +1,32 @@
+@layer components {
+	.project-card {
+		--card-pad: 1.25rem;
+		--card-radius: 0.375rem;
+		--card-border: color-mix(in lch, var(--color-ink) 12%, transparent);
+		--card-surface: color-mix(in lch, var(--color-canvas) 94%, var(--color-ink));
+
+		display: block;
+		padding: var(--card-pad);
+		background: var(--card-surface);
+		border: 1px solid var(--card-border);
+		border-radius: var(--card-radius);
+		height: 100%;
+		transition: border-color 0.2s ease;
+	}
+
+	a.project-card:hover {
+		--card-border: color-mix(in lch, var(--color-ink) 24%, transparent);
+	}
+
+	a.project-card:hover h3 {
+		color: color-mix(in lch, var(--color-ink) 100%, var(--lch-blue) 8%);
+	}
+
+	.project-card--muted {
+		--card-surface: color-mix(in lch, var(--color-canvas) 97%, var(--color-ink));
+	}
+
+	.project-card h3 + :not(h3) {
+		margin-top: 0.5rem;
+	}
+}

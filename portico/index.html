@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portico — SSH terminal sites in Go</title>
+    <meta name="description" content="Go framework for interactive, multi-user terminal sites over SSH. Scenes, actions, and effects — start a site module and ssh in.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bmd-studios.com/portico/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:url" content="https://bmd-studios.com/portico/">
+    <meta property="og:site_name" content="BMD-Studios">
+    <meta property="og:title" content="Portico — SSH terminal sites in Go">
+    <meta property="og:description" content="Framework for building multi-user terminal experiences served over SSH. Your site is a Go module; Portico runs the server, sessions, and shared state.">
+    <meta property="og:image" content="https://bmd-studios.com/static/images/web_icon.png">
+    <meta property="og:image:width" content="649">
+    <meta property="og:image:height" content="649">
+    <meta property="og:image:alt" content="BMD-Studios logo">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mrblindmouse">
+    <meta name="twitter:creator" content="@mrblindmouse">
+    <meta name="twitter:url" content="https://bmd-studios.com/portico/">
+    <meta name="twitter:title" content="Portico — SSH terminal sites in Go">
+    <meta name="twitter:description" content="Build interactive SSH terminal sites with scenes, actions, spaces, and effects. Go module in, ssh in out.">
+    <meta name="twitter:image" content="https://bmd-studios.com/static/images/web_icon.png">
+    <meta name="twitter:image:alt" content="BMD-Studios logo">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://bmd-studios.com/portico/#app",
+          "name": "Portico",
+          "description": "Go framework for interactive, multi-user terminal sites served over SSH.",
+          "url": "https://bmd-studios.com/portico/",
+          "image": "https://bmd-studios.com/static/images/web_icon.png",
+          "codeRepository": "https://github.com/MrBlindMouse/Portico",
+          "applicationCategory": "DeveloperApplication",
+          "programmingLanguage": "Go",
+          "license": "https://opensource.org/licenses/MIT",
+          "isAccessibleForFree": true,
+          "keywords": ["SSH", "terminal", "Go", "framework", "TUI", "multi-user", "opensource"],
+          "author": {
+            "@type": "Person",
+            "@id": "https://bmd-studios.com/#person",
+            "name": "Johan Nel",
+            "url": "https://bmd-studios.com"
+          },
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://bmd-studios.com/#website",
+            "name": "BMD-Studios",
+            "url": "https://bmd-studios.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://bmd-studios.com/portico/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "BMD-Studios",
+              "item": "https://bmd-studios.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Portico",
+              "item": "https://bmd-studios.com/portico/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="../static/css/_reset.css">
+    <link rel="stylesheet" href="../static/css/colors.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/project-card.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <link rel="stylesheet" href="../static/css/product-landing.css">
+
+    <script defer src="https://analytics.bmd-studios.com/script.js" data-website-id="8697f1f8-02ea-4dbf-8157-0031a327e362"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="site-nav__start">
+            <a class="site-nav__home" href="/">BMD-Studios</a>
+            <span class="site-nav__sep" aria-hidden="true">/</span>
+            <span class="site-nav__here">Portico</span>
+        </div>
+        <a href="https://github.com/MrBlindMouse/Portico" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </nav>
+
+    <header class="hero hero--product">
+        <div class="hero__layout">
+            <div class="hero__copy">
+                <div class="hero__intro">
+                    <p class="hero__eyebrow">Portico</p>
+                    <h1 class="hero__title">SSH terminal sites in Go</h1>
+                    <p class="hero__lede">A framework for interactive, multi-user experiences in the terminal.</p>
+                    <p class="hero__detail">You write scenes and actions in your own module; Portico serves SSH, routes input, runs sessions, and holds shared spaces. Starter plans via <code>portico generate</code> — guestbook, chat, forms, and more.</p>
+                    <p class="hero__scope">The framework repo, not a finished site — bring your own world.</p>
+                </div>
+                <p class="hero__cta">
+                    <a href="https://github.com/MrBlindMouse/Portico">View on GitHub</a>
+                    <span class="hero__cta-sep" aria-hidden="true">·</span>
+                    <a href="https://github.com/MrBlindMouse/Portico#get-started">Get started</a>
+                </p>
+            </div>
+            <figure class="hero__visual">
+                <pre class="hero__terminal" aria-label="Example SSH session">$ ssh -p 2222 localhost
+Portico site · dev listener :2222
+
+  lobby
+  ─────
+  Visitors sign the guestbook or step into chat.
+
+  [g] guestbook   [c] chat   [q] quit
+&gt; g
+
+  guestbook — leave a line for the wall.</pre>
+            </figure>
+        </div>
+    </header>
+
+    <main id="main" class="page page--product">
+        <section class="page__section" id="features" aria-labelledby="features-heading">
+            <h2 id="features-heading">Features</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Scenes and actions</h3>
+                    <p>Declare components in Go: scenes render the terminal; actions return effects. The runtime dispatches input and applies state changes — session and space updates stay in one place.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Installation builder</h3>
+                    <p>Merge components into an installation, validate wiring, and serve with <code>portico.Serve</code>. Convention over configuration so a small <code>main</code> can grow into a full site.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Spaces and presence</h3>
+                    <p>Shared spaces for multi-user flows. Identity comes from SSH keys plus optional accounts, nicknames, and KV stores — not a bolt-on auth stack.</p>
+                </article>
+                <article class="project-card">
+                    <h3>CLI for site authors</h3>
+                    <p><code>portico init</code> scaffolds a module; <code>generate</code> copies starter plans you own and edit. Docs, wire helpers, inspect snapshots, and dev serve round out the loop.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Rendering and themes</h3>
+                    <p>Layout and theme helpers for readable terminal UI. Scenes draw; render stays ignorant of session internals so structure stays predictable.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Agent-friendly shape</h3>
+                    <p>Designed so humans steer and agents implement: recognizable package boundaries, plans as copy-paste starters, and invariants enforced by tests and arch checks.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page__section" id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <article class="project-card">
+                <p>Portico is for people who want SSH to be more than a shell — small social spaces, playful lobbies, or bespoke text UIs — without hand-rolling session plumbing every time.</p>
+                <p>It is opinionated about structure (scenes, actions, effects, installation) and deliberately open about what you build on top. Not a web framework, not a MUD engine, not mass-scale game infra — a porch you can extend into a site.</p>
+                <p>The repo ships the framework and embedded plans; your module is the product visitors <code>ssh</code> into.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Portico</p>
+        <p class="footer__credit">
+            <a href="https://github.com/MrBlindMouse/Portico" target="_blank" rel="noopener noreferrer">GitHub</a>
+            · Created by <a href="https://bmd-studios.com/">BMD-Studios</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>para-scope — Event Hub and Operational Dashboard</title>
+    <meta name="description" content="Self-hosted event hub and ops dashboard: webhooks, rules, actions, dashboards, calendar and kanban. FastAPI and SQLite, no Docker required.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bmd-studios.com/para-scope/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:url" content="https://bmd-studios.com/para-scope/">
+    <meta property="og:site_name" content="BMD-Studios">
+    <meta property="og:title" content="para-scope — Event Hub and Operational Dashboard">
+    <meta property="og:description" content="Self-hosted event hub for personal or small-team infrastructure: sources, rules, actions, dashboards, calendar and kanban — without a full monitoring stack.">
+    <meta property="og:image" content="https://bmd-studios.com/para-scope/para-scope_screenshot.png">
+    <meta property="og:image:width" content="1838">
+    <meta property="og:image:height" content="963">
+    <meta property="og:image:alt" content="para-scope dashboard with status, charts, and live data widgets">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mrblindmouse">
+    <meta name="twitter:creator" content="@mrblindmouse">
+    <meta name="twitter:url" content="https://bmd-studios.com/para-scope/">
+    <meta name="twitter:title" content="para-scope — Event Hub and Operational Dashboard">
+    <meta name="twitter:description" content="Self-hosted event hub: webhooks and polls, rules, actions, shared fields, and drag-and-drop dashboard, calendar, and kanban pages.">
+    <meta name="twitter:image" content="https://bmd-studios.com/para-scope/para-scope_screenshot.png">
+    <meta name="twitter:image:alt" content="para-scope dashboard with status, charts, and live data widgets">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://bmd-studios.com/para-scope/#app",
+          "name": "para-scope",
+          "description": "Self-hosted event hub and operational dashboard with webhooks, polling, rules, actions, and modular dashboard, calendar, and kanban pages.",
+          "url": "https://bmd-studios.com/para-scope/",
+          "image": "https://bmd-studios.com/para-scope/para-scope_screenshot.png",
+          "screenshot": "https://bmd-studios.com/para-scope/para-scope_screenshot.png",
+          "codeRepository": "https://github.com/MrBlindMouse/para_scope",
+          "applicationCategory": "DeveloperApplication",
+          "softwareRequirements": "Python 3.11+",
+          "programmingLanguage": "Python",
+          "license": "https://opensource.org/licenses/MIT",
+          "isAccessibleForFree": true,
+          "keywords": ["event hub", "dashboard", "webhook", "kanban", "calendar", "self-hosted", "FastAPI", "opensource"],
+          "author": {
+            "@type": "Person",
+            "@id": "https://bmd-studios.com/#person",
+            "name": "Johan Nel",
+            "url": "https://bmd-studios.com"
+          },
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://bmd-studios.com/#website",
+            "name": "BMD-Studios",
+            "url": "https://bmd-studios.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://bmd-studios.com/para-scope/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "BMD-Studios",
+              "item": "https://bmd-studios.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "para-scope",
+              "item": "https://bmd-studios.com/para-scope/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="../static/css/_reset.css">
+    <link rel="stylesheet" href="../static/css/colors.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/project-card.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <link rel="stylesheet" href="../static/css/product-landing.css">
+
+    <script defer src="https://analytics.bmd-studios.com/script.js" data-website-id="8697f1f8-02ea-4dbf-8157-0031a327e362"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="site-nav__start">
+            <a class="site-nav__home" href="/">BMD-Studios</a>
+            <span class="site-nav__sep" aria-hidden="true">/</span>
+            <span class="site-nav__here">para-scope</span>
+        </div>
+        <a href="https://github.com/MrBlindMouse/para_scope" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+    </nav>
+
+    <header class="hero hero--product">
+        <div class="hero__layout">
+            <div class="hero__copy">
+                <div class="hero__intro">
+                    <p class="hero__eyebrow">para-scope</p>
+                    <h1 class="hero__title">Event hub and operational dashboard</h1>
+                    <p class="hero__lede">Self-hosted for personal or small-team infrastructure.</p>
+                    <p class="hero__detail">Sources in via webhooks or polls. Rules and actions update shared fields, notify you, forward HTTP, push to the browser, or add kanban cards — on Main and named pages for dashboards, a calendar week, or a board.</p>
+                    <p class="hero__scope">A focused companion — not Prometheus/Grafana or a workflow engine like n8n.</p>
+                </div>
+                <p class="hero__cta">
+                    <a href="https://github.com/MrBlindMouse/para_scope">View on GitHub</a>
+                    <span class="hero__cta-sep" aria-hidden="true">·</span>
+                    <a href="https://github.com/MrBlindMouse/para_scope#quick-start">Quick start</a>
+                </p>
+            </div>
+            <figure class="hero__visual">
+                <img
+                    src="para-scope_screenshot.png"
+                    alt="para-scope dashboard with status tiles, charts, and live field-driven widgets"
+                    width="1838"
+                    height="963"
+                    decoding="async"
+                    fetchpriority="high"
+                >
+            </figure>
+        </div>
+    </header>
+
+    <main id="main" class="page page--product">
+        <section class="page__section" id="features" aria-labelledby="features-heading">
+            <h2 id="features-heading">Features</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Sources and pipeline</h3>
+                    <p>Webhook receivers with HMAC and provider helpers (Stripe, GitHub, Slack, Discord, PayPal) plus scheduled pollers for APIs, health checks, RSS, IMAP, ICS calendars, and more. Event types, rules with conditions, and ordered actions on each match.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Shared fields</h3>
+                    <p>Named logbook, value, text, toggle, and data fields feed widgets and actions from one SQLite-backed store — no separate metrics database to run.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Actions</h3>
+                    <p>Push field updates, forward HTTP, notify via ntfy / Gotify / Discord, send Web Push, add kanban cards, or run optional local scripts — credentials encrypted at rest.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Dashboard pages</h3>
+                    <p>Drag-and-drop GridStack layouts on Main and named dashboard pages: charts, clocks, status, notes, and templates bound to field slugs at display time.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Calendar and kanban</h3>
+                    <p>Read-only ICS week view and a Next / Doing / Done board. Focus modes from calendar categories can drive fields and cards; moving a card can emit pipeline events.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Ops and style</h3>
+                    <p>Live event tail on <code>/events</code>, self-metrics on <code>/system</code>, audit log, pipeline and user config, plus themes, fonts, and dashboard backgrounds.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page__section" id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <article class="project-card">
+                <p>para-scope is for people who want one private place to watch small infrastructure and side projects: see when a webhook fires, whether a poll succeeded, and what changed — then do something about it, without standing up Prometheus, Grafana, or a workflow engine.</p>
+                <p>It started as a personal ops board and event inbox. The idea is to keep signals, a bit of history, and the views you care about (status, charts, calendar, kanban) under your own login on your own machine — not as a hosted product and not as enterprise observability.</p>
+                <p>It is meant to be approachable for a single user and deep enough to grow with a small team, with clear extension points for new pollers and actions. Scope stays intentionally modest: a companion hub, not a replacement for dedicated monitoring or automation platforms.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>para-scope</p>
+        <p class="footer__credit">
+            <a href="https://github.com/MrBlindMouse/para_scope" target="_blank" rel="noopener noreferrer">GitHub</a>
+            · Created by <a href="https://bmd-studios.com/">BMD-Studios</a>
+        </p>
+    </footer>
+</body>
+</html>

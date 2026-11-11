@@ -1,94 +1,132 @@
 @layer layout {
+	.hero {
+		--frame-border: color-mix(in lch, var(--color-ink) 14%, transparent);
 
-    body {
-        position: relative;
-        z-index: 1;
-    }
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: calc(100% - 3rem);
+		min-height: calc(100vh - 3rem);
+		margin: 1.5rem auto;
+		padding: 2rem;
+		border: 1px solid var(--frame-border);
+	}
 
-    .header {
-        width: calc(100% - 4rem);
-        min-height: calc(100vh - 4rem);
-        margin: 2rem;
-        padding: 2rem;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid var(--color-mid-grey);
-    }
+	.hero__inner {
+		max-width: min(100%, 32rem);
+		text-align: left;
+	}
 
-    @media (max-width: 35rem) {
-        .header {
-            width: 100%;
-            min-height: 100vh;
-            margin: 0;
-            padding: 1rem;
-            border: none;
-        }
-    }
+	.hero__brand {
+		font-size: clamp(2.25rem, 6vw, 3.25rem);
+		font-weight: 500;
+		line-height: 1.12;
+		letter-spacing: -0.03em;
+	}
 
-    .main {
-        display: flex;
-        margin: 1ch;
-    }
+	.hero__brand-line {
+		display: block;
+	}
 
-    .main .content {
-        flex: 3;
-        min-width: min(100%, 20rem);
-        padding: 1rem;
-    }
-    .main .content h3 {
-        text-align: center;
-    }
-    .main .content .card {
-        display: block;
-        background: color-mix(in oklab, var(--color-mid-grey) 10%, transparent);
-        backdrop-filter: blur(10px);
-        border-radius: 1rem;
-        padding: 1rem;
-        transition: background 0.3s ease;
-    }
-    .main .content .card h3 {
-        text-align: left;
-    }
+	.hero__brand-suffix {
+		font-size: clamp(1.25rem, 3.5vw, 1.65rem);
+		font-weight: 500;
+		letter-spacing: 0.04em;
+		color: color-mix(in lch, var(--color-ink) 58%, var(--color-canvas));
+		padding-top: 0.3em;
+		padding-left: 1em;
+	}
 
-    .main .content a.card:hover {
-        background: color-mix(in oklab, var(--color-mid-grey) 20%, transparent);
-    }
+	.hero__tagline {
+		margin-top: 1.75rem;
+		color: color-mix(in lch, var(--color-ink) 72%, var(--color-canvas));
+		font-size: 1rem;
+	}
 
-    .icon-links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-    }
+	.hero__role {
+		margin-top: 0.35rem;
+		color: color-mix(in lch, var(--color-ink) 78%, var(--color-canvas));
+		font-size: 1.0625rem;
+	}
 
-    .icon-link {
-        padding: 0.5rem;
-        color: var(--color-ink);
-    }
+	.hero__role-line::after {
+		content: "_";
+		opacity: 0.45;
+		animation: caret-blink 1s step-end infinite;
+	}
 
-    .icon-link:hover {
-        color: var(--color-ink-link);
-    }
+	@keyframes caret-blink {
+		50% {
+			opacity: 0;
+		}
+	}
 
-    .icon-link svg {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-    
-    .main .side {
-        flex: 2;
-    }
-    
-    
-    .footer {
-        position: relative;
-        text-align: center;
-        background: color-mix(in oklab, var(--color-mid-grey) 10%, transparent);
-        backdrop-filter: blur(10px);
-        margin: auto;
-        padding: 1rem;
-    }
-    
+	.page {
+		width: min(100% - 2rem, 72rem);
+		margin-inline: auto;
+		padding-bottom: 3rem;
+	}
+
+	.page__section + .page__section {
+		margin-top: 2.5rem;
+	}
+
+	.about-card {
+		margin-top: 1rem;
+	}
+
+	.icon-links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		margin-top: 1.25rem;
+	}
+
+	.icon-link {
+		padding: 0.5rem;
+		color: color-mix(in lch, var(--color-ink) 80%, var(--color-canvas));
+		border-radius: 0.25rem;
+	}
+
+	.icon-link:hover {
+		color: var(--color-ink);
+	}
+
+	.icon-link svg {
+		width: 1.35rem;
+		height: 1.35rem;
+	}
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem 1.25rem;
+		margin-top: 1.25rem;
+	}
+
+	.footer {
+		width: min(100% - 2rem, 72rem);
+		margin: 0 auto 1.5rem;
+		padding: 1rem;
+		text-align: center;
+		font-size: 0.875rem;
+		color: color-mix(in lch, var(--color-ink) 58%, var(--color-canvas));
+		border-top: 1px solid color-mix(in lch, var(--color-ink) 10%, transparent);
+	}
+
+	@media (max-width: 40rem) {
+		.hero {
+			width: 100%;
+			min-height: 100svh;
+			margin: 0;
+			padding: 1.25rem;
+			border: none;
+		}
+
+		.project-grid {
+			grid-template-columns: 1fr;
+		}
+	}
 }
