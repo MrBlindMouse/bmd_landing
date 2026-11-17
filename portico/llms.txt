@@ -1,0 +1,35 @@
+# Portico
+> Go framework for interactive, multi-user terminal sites over SSH. This index is the site-author manual only (docs/manual/); building-a-site.md and site-agents.md remain in the Portico GitHub repo at your module tag.
+
+## Bootstrap
+curl -fsSL https://bmd-studios.com/portico/llms.txt
+curl -fsSL https://bmd-studios.com/portico/docs/manual/README.md
+
+Pin manual fetches to the same git tag as `github.com/MrBlindMouse/Portico` in your site's `go.mod`.
+
+## Manual — guides
+curl -fsSL https://bmd-studios.com/portico/docs/manual/00-overview.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/01-getting-started.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/02-authoring.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/03-input.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/04-rendering.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/05-identity-accounts.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/06-running.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/07-production.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/08-testing.md
+
+## Manual — reference
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/effects.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/contexts.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/options.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/config-file.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/inspect-http.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/status-http.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/cli.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/plans.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/wire.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/reference/packages.md
+
+## Manual — appendices
+curl -fsSL https://bmd-studios.com/portico/docs/manual/appendices/hot-reload.md
+curl -fsSL https://bmd-studios.com/portico/docs/manual/appendices/glossary.md

@@ -81,6 +81,7 @@
     </script>
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="alternate" type="text/plain" href="https://bmd-studios.com/portico/llms.txt" title="Portico manual (curl index for agents)">
 
     <link rel="stylesheet" href="../static/css/_reset.css">
     <link rel="stylesheet" href="../static/css/colors.css">
@@ -119,6 +120,8 @@
                     <a href="https://github.com/MrBlindMouse/Portico">View on GitHub</a>
                     <span class="hero__cta-sep" aria-hidden="true">·</span>
                     <a href="https://github.com/MrBlindMouse/Portico#get-started">Get started</a>
+                    <span class="hero__cta-sep" aria-hidden="true">·</span>
+                    <a href="docs/manual/README.md">Site-author manual</a>
                 </p>
             </div>
             <figure class="hero__visual">
@@ -168,6 +171,19 @@ Portico site · dev listener :2222
             </div>
         </section>
 
+        <section class="page__section" id="documentation" aria-labelledby="documentation-heading">
+            <h2 id="documentation-heading">Documentation</h2>
+            <article class="project-card">
+                <p>The <strong>site-author manual</strong> from the Portico repo is published here as Markdown — tutorials, guides, and API reference. Pin what you read to the same module version as your site's <code>go.mod</code>.</p>
+                <p>
+                    <a href="docs/manual/README.md">Manual</a>
+                    <span aria-hidden="true"> · </span>
+                    <a href="llms.txt">llms.txt</a>
+                </p>
+                <p>For agents: <code>curl -fsSL https://bmd-studios.com/portico/llms.txt</code> lists every chapter. Additional framework docs (<code>building-a-site.md</code>, <code>site-agents.md</code>) stay in the <a href="https://github.com/MrBlindMouse/Portico/tree/main/docs" target="_blank" rel="noopener noreferrer">GitHub repo</a>.</p>
+            </article>
+        </section>
+
         <section class="page__section" id="about" aria-labelledby="about-heading">
             <h2 id="about-heading">About</h2>
             <article class="project-card">
@@ -182,6 +198,8 @@ Portico site · dev listener :2222
         <p>Portico</p>
         <p class="footer__credit">
             <a href="https://github.com/MrBlindMouse/Portico" target="_blank" rel="noopener noreferrer">GitHub</a>
+            · <a href="docs/manual/README.md">Manual</a>
+            · <a href="llms.txt">llms.txt</a>
             · Created by <a href="https://bmd-studios.com/">BMD-Studios</a>
         </p>
     </footer>

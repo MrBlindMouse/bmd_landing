@@ -1,0 +1,92 @@
+# Rendering
+
+## Output model
+
+Each scene returns one **string**. After every applied action batch (and on terminal resize), the runtime paints that string. Terminal size comes from `ctx.Size()` (columns, rows); default **80×24** until the client reports dimensions.
+
+## Theme
+
+- `opts.Theme` sets the session theme (`render.Theme`).
+- When `Theme` is nil and `NO_COLOR` is non-empty, `render.Plain` is used.
+- Otherwise `render.Default` ANSI roles apply: bold, muted, error, accent, ok, warn, inverse.
+
+Use `ctx.Theme()` in `Render`; apply roles after fitting text (`render` does not strip ANSI for width). Theme output is for terminal strings. `Screen` grid cells must stay plain. `Screen.DrawList` marks the selected column. `Screen.MarkRole` marks bold, muted, error, accent, ok, warn, or inverse on plain cells. `Show` injects the theme. `Host.SubmitAll(nil)` repaints every live session. For periodic repaints, use `portico.Every` from `Options.OnReady` (see [Running](06-running.md) and [Effects](reference/effects.md#submit-from-the-process)).
+
+## Text helpers
+
+| Function | Role |
+|----------|------|
+| `render.Wrap`, `Truncate`, `Pad` | Fit to width (rune counts) |
+| `render.AlignLeft`, `AlignRight`, `AlignCenter` | Alignment after width known |
+
+## Layout helpers
+
+| Function | Role |
+|----------|------|
+| `render.Box`, `BoxBody` | Bordered region; `BoxBody` returns caret `Rect` |
+| `render.Columns` | Side-by-side columns |
+| `render.Table`, `TableCell` | Fixed-width table |
+| `render.List`, `ListRow` | List with selection marker |
+| `render.Progress` | Static bar `[##--] 50%` |
+| `render.SpinnerFrame(i)` | Single glyph; you advance `i` in local state (no framework timer) |
+
+## Lists in a scene
+
+Store selected index in session-local state:
+
+- Default key: `installation.LocalListIndex` (`list_index`).
+- `installation.MoveList(ctx, key, delta, n)` → `SetLocal` effect, clamped.
+- `installation.RenderList(ctx, key, items, visible)` draws the window as one string; selected row uses `>` and inverse role.
+- `installation.DrawList` / `render.Screen.DrawList` for lists inside a `Screen` layout.
+
+Bind `up`/`down` with `Scene.Keys: true`. Bind `enter` to confirm or open, `backspace` to go back, and `tab` to move to the next item. `home`, `end`, and `delete` are named keys too. Keys scenes use `WriteGrid` at paint time.
+
+## Markdown writeups
+
+`render.FormatWriteup(markdown, width, theme)` turns a **small markdown subset** into terminal text:
+
+- ATX headings `#` … `######` (bold; extra blank lines after larger headings)
+- Nested bullet and ordered lists (two leading spaces per nest level)
+- Fenced ``` code blocks (muted when the theme has Muted)
+- Inline `**bold**` and `` `code` ``
+
+Pass `width <= 0` to skip wrapping. The blog plan formats post assets this way.
+
+## Forms
+
+Multi-step prompts (optional pattern in `installation` package):
+
+- `StartForm`, `AdvanceFormValue`, `CancelForm`
+- `FormText`, `RenderForm` for display
+- `SetFlash`, `ClearFlash`, `FlashPrefix` for one-line session feedback
+
+See the form plan (`go run …/cmd/portico generate form`) for an example graph.
+
+## Screen grid and caret
+
+```go
+w, h := ctx.Size()
+s := render.NewScreen(w, h)
+s.DrawWithin(0, 0, w/2, h-1, leftPanel)
+s.DrawWithin(0, w/2, w-w/2, h-1, rightPanel)
+s.Input(h-1, 0, w/2, ">")
+return s.Show(ctx)
+```
+
+- `DrawWithin` clips so regions do not overwrite neighbors. Do not draw ANSI into the grid.
+- `DrawList` writes list rows as plain cells. Inverse on `Show(ctx)` covers the list column of the selected line.
+- `MarkRole` stores a theme role on plain cells. `Show` wraps each contiguous run.
+- One `Input` per frame; second call replaces the first.
+- `Keys: true` + placed input → render error.
+
+## Installation assets
+
+- **`ctx.Asset(name)`** — text assets from `Builder.Asset` or from `Options.AssetDir`. Polling replaces the **string** map only.
+- **`ctx.AssetAny(name)`** — site-owned values from `Builder.AssetAny` (for example `[]byte` or a struct your scene type-asserts). They are **not** loaded from `AssetDir`. A poll of the asset directory does not remove them.
+- **`Asset(name)`** does not read the any-map. The same name may exist in both maps; look up each map explicitly.
+
+Register binaries or other typed values with `AssetAny` at build time, or call `Host.UpdateAssetAny` / `Engine.UpdateAssetAny` from your own poll loop. The directory loader stays text-only. Terminal graphics protocols are site or research concerns, not part of this API.
+
+## PlaceInput on RenderContext
+
+`ctx.PlaceInput(render.Input{...})` records caret metadata for the frame only (no session mutation). Prefer `Screen` for multi-region layouts.

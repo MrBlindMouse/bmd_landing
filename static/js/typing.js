@@ -27,6 +27,10 @@
 		"a perfectionist",
 		"a life-long learner",
 		"an ADHD sufferer",
+		". . .",
+		"and I am a Christian",
+		"a son of God!",
+		"Amen"
 	];
 
 	if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;

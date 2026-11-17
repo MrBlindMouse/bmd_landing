@@ -1,0 +1,24 @@
+# BMD-Studios
+> Static portfolio and product landings for Johan Nel (MrBlindMouse) — developer and designer, Johannesburg, South Africa.
+
+## This file
+curl -fsSL https://bmd-studios.com/llm.txt
+
+## Site pages (HTML)
+- https://bmd-studios.com/
+- https://bmd-studios.com/para-scope/
+- https://bmd-studios.com/portico/
+- https://bmd-studios.com/marked/
+- https://bmd-studios.com/oshkelosh/
+
+## Portico — agent docs (Markdown, curl)
+Published manual only (mirror of Portico docs/manual/). Other framework docs are on GitHub at your module tag.
+
+curl -fsSL https://bmd-studios.com/portico/llms.txt
+curl -fsSL https://bmd-studios.com/portico/docs/manual/README.md
+
+Framework source: https://github.com/MrBlindMouse/Portico
+
+## Optional
+- https://bmd-studios.com/robots.txt
+- https://bmd-studios.com/sitemap.xml
